@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+###############################################
+#
+#  Run the custom-component-store
+#
+###############################################
+
+s6-svwait -u -t 5000 /var/run/s6/services/store
+
+exec componentstore

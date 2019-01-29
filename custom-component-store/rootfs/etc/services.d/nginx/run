@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+s6-svwait -u -t 5000 /var/run/s6/services/store
+
+hass.log.info "Starting custom-component-store"
+
+exec nginx -g "daemon off;"

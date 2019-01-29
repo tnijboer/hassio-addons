@@ -1,0 +1,9 @@
+{
+    "build_from": {
+        "aarch64": "hassioaddons/base:2.3.1",
+        "amd64": "hassioaddons/base:2.3.1",
+        "armhf": "hassioaddons/base:2.3.1",
+        "i386": "hassioaddons/base:2.3.1"
+    },
+    "args": {}
+}
