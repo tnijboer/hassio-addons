@@ -21,11 +21,7 @@ RUN \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
-    && rm -f -r /tmp/* \
-    \
-    && cd /opt/store \
-    \
-    && python3 /opt/store/setup.py install
+    && rm -f -r /tmp/*
 
 
 # Copy root filesystem
