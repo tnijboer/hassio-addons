@@ -1,4 +1,5 @@
 # Miscellaneous Hass.io Addons: Custom Component Store
+### This is an experimental addon - may be unstable!
 
 An easy-to-use web app for managing custom components. This is a Hass.io addon for the program made by [Ludeeus](https://github.com/ludeeus/custom-component-store)
 
