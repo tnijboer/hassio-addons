@@ -48,8 +48,6 @@ more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
 
-Using `trace` or `debug` log levels puts the cloud9 server into debug mode
-as well.
 
 ### Option: `ssl`
 
