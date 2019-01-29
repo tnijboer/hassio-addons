@@ -18,6 +18,8 @@ RUN \
     nginx=1.14.2-r0 \
     python3=3.6.6-r0 \
     redis=4.0.11-r0 \
+    nginx-mod-http-lua=1.14.2-r0 \
+    lua-resty-http=0.12-r1 \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
@@ -48,8 +50,8 @@ LABEL \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="Custom Component Store"\
     org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/ludeeus/custom-component-store" \
+    org.label-schema.url="https://github.com/antoni-k/hassio-addons/" \
     org.label-schema.usage="https://github.com/ludeeus/custom-component-store/blob/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     # org.label-schema.vcs-url="" \
-    org.label-schema.vendor="antoni-k's Hass.io Addons"
+    org.label-schema.vendor="Miscellaneous Hass.io Addons"
