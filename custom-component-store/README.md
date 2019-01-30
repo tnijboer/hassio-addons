@@ -5,7 +5,7 @@ An easy-to-use web app for managing custom components. This is a Hass.io addon f
 
 ## Installation
 
-1. [Add the main Miscellaneous Hass.io Addons repo]() to your Hass.io instance.
+1. Add the main Miscellaneous Hass.io Addons repo (`https://github.com/antoni-k/hassio-addons`) to your Hass.io instance.
 2. Install the "Custom Component Store" add-on.
 3. Start the "Custom Component Store" add-on
 4. Check the logs of the "Custom Component Store" add-on to see if everything went well.
