@@ -20,18 +20,27 @@ RUN \
     redis=4.0.11-r0 \
     nginx-mod-http-lua=1.14.2-r0 \
     lua-resty-http=0.12-r1 \
+    unzip \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
     && rm -f -r /tmp/*
 
+# Download and install custom component store
+RUN \
+    curl -sL -o /tmp/c2s.zip https://github.com/ludeeus/custom-component-store/archive/1.0.0.zip \
+    && unzip -qq c2s.zip \
+    && mkdir -p /opt/store \
+    && cd /tmp/custom-component-store-* \
+    && cd rootfs/opt/store/ \
+    && cp -R . /opt/store \
+    && cd /tmp \
+    && rm -rf /tmp/custom-component-store-* /tmp/*.zip \
+    && cd /opt/store \
+    && python3 /opt/store/setup.py install
 
 # Copy root filesystem
 COPY rootfs /
-
-RUN \
-    cd /opt/store \
-    && python3 /opt/store/setup.py install
 
 # Build arguments
 ARG BUILD_DATE
