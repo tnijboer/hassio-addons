@@ -1,6 +1,9 @@
 # Miscellaneous Addons for Hass.io
 A repository of miscellaneous addons I've made
 
+## Installation
+Add `https://github.com/antoni-k/hassio-addons` as an addon source to your Hass.io installation, then wait for it to update the store.
+
 ---
 ## Currently Offered
 ### [`Custom Component Store`](custom-component-store/README.md)
