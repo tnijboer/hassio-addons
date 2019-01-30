@@ -29,6 +29,7 @@ RUN \
 # Download and install custom component store
 RUN \
     curl -sL -o /tmp/c2s.zip https://github.com/ludeeus/custom-component-store/archive/1.0.0.zip \
+    && cd /tmp \
     && unzip -qq c2s.zip \
     && mkdir -p /opt/store \
     && cd /tmp/custom-component-store-* \
