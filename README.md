@@ -1,5 +1,5 @@
-# hassio-addons
-Miscellaneous Addons for Hass.io
+# Miscellaneous Addons for Hass.io
+A repository of miscellaneous addons I've made
 
 ---
 ## Currently Offered
