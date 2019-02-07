@@ -10,7 +10,6 @@ COPY requirements.txt /tmp/
 # Build
 RUN \
     apk add --no-cache \
-    apache2-utils=2.4.38-r2 \
     apk-tools=2.10.1-r0 \
     bash=4.4.19-r1 \
     ca-certificates=20171114-r3 \
@@ -20,25 +19,10 @@ RUN \
     redis=4.0.11-r0 \
     nginx-mod-http-lua=1.14.2-r0 \
     lua-resty-http=0.12-r1 \
-    unzip \
     \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
     && rm -f -r /tmp/*
-
-# Download and install custom component store
-RUN \
-    curl -sL -o /tmp/c2s.zip https://github.com/ludeeus/custom-component-store/archive/1.0.0.zip \
-    && cd /tmp \
-    && unzip -qq c2s.zip \
-    && mkdir -p /opt/store \
-    && cd /tmp/custom-component-store-* \
-    && cd rootfs/opt/store/ \
-    && cp -R . /opt/store \
-    && cd /tmp \
-    && rm -rf /tmp/custom-component-store-* /tmp/*.zip \
-    && cd /opt/store \
-    && python3 /opt/store/setup.py install
 
 # Copy root filesystem
 COPY rootfs /
