@@ -1,6 +1,8 @@
 # Miscellaneous Addons for Hass.io
 A repository of miscellaneous addons I've made
 
+## `This is archived due to the fact that I do not have a working Hass.io install right now and therefore cannot test anything`
+
 ## Installation
 Add `https://github.com/antoni-k/hassio-addons` as an addon source to your Hass.io installation, then wait for it to update the store.
 
